@@ -1,0 +1,27 @@
+{% extends 'base_template.html' %}
+{% block title %}Registrar llegada{% endblock %}
+{% block logi %}<h1>Logi Pack</h1>{% endblock %}
+{% block content %}
+    <div>
+        {% if mensaje=="Correcto" %}
+            <h3 class="verde">Llegada de transporte registrada</h3> 
+        {% elif mensaje=="Error" %}
+            <h3 class="rojo">Se produjo un error en el registro</h3>
+        {% endif %}
+
+        <h3>Trasnportes sin llegada registrada con destino {{sucursal}}:</h3>
+        <form action="http://127.0.0.1:5000/registrar_llegada", method="POST", class="container">
+            <h4>Numero de transporte y fecha y hora de salida </h4>
+            <ul>
+                {% for transporte in transportes %}
+                <li>
+                    <label for="item" class="item">{{transporte.numerotransporte}}  -  {{transporte.fechahorasalida}}</label>
+                    <input type="checkbox" id="item" name="item" value="{{transporte.numerotransporte}}" class="check">
+                </li>
+                {% endfor %}
+            </ul>
+            <button type="submit" class="button">Registrar llegada</button><br>
+            <a href="{{url_for('index')}}" class="button">Volver</a>
+        </form>
+    </div>
+{% endblock %}

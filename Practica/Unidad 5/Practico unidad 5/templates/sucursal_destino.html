@@ -1,0 +1,18 @@
+{% extends 'base_template.html' %}
+{% block title %}LogiPack{% endblock %}
+{% block logi %}<h1>Logi Pack</h1>{% endblock %}
+{% block content %}
+    <div>
+        <form action="http://127.0.0.1:5000/registrar_salida", method="POST", class="container">
+        <label for="sucursal">Selecciona la sucursal de destino</label>
+        <select id="select" name="select" required><br>
+            <option value="">-- Sucursales --</option>
+            {% for sucursal in sucursales %}
+                <option value="{{sucursal.provincia}}">{{sucursal.numero}}-{{sucursal.provincia}}-{{sucursal.localidad}}</option>
+            {% endfor %}
+        </select><br>
+        <button type="submit" class="button">Buscar</button><br>
+        <a href="{{url_for('index')}}" class="button">Volver</a>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base_template.html'%}
+{% block title %}LogiPack{% endblock %}
+{% block logi %}<h1>Logi Pack</h1>{% endblock %}
+
+{% block content %}
+    <div>
+        {% if hora < 12 %}
+            <h2>Buenos dias {{nombre}}</h2>
+        {% elif hora < 20 %}
+            <h2>Buenas tardes {{nombre}}</h2>
+        {% else %}
+            <h2>Buenas noches {{nombre}}</h2>
+        {% endif %}
+        <h3>¿En que podemos ayudarte?</h3><br>
+        <ul>
+            <li><a href="{{url_for('recepcion')}}" class="button">Registrar recepción de un paquete</a></li><br><br>
+            <li><a href="{{ url_for('sucursal_destino')}}" class="button">Registrar salida de transporte</a></li><br><br>
+            <li><a href="{{ url_for('llegada')}}" class="button">Registrar llegada de transporte 
+            </a></li><br><br>
+        </ul>
+        <h4>Sucursal selecionada: {{sucursal}}</h4>
+    </div>
+    
+{% endblock %}

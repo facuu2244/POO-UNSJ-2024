@@ -1,0 +1,132 @@
+body {
+    font-family: sans-serif;
+    align-items: center;
+    background-color: #E4EDF4;
+    align-items: center;
+    }
+
+header {
+    text-align: center;
+}
+header img {
+  width: 225px;
+  height: auto;
+}
+h1 {
+    margin: 20px;
+    padding: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+  }
+h2{
+    margin: 20px 0;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+h3{
+    padding: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+h4{
+    padding: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+div {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    border-radius: 10px;
+  }
+
+.login{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    border-radius: 10px;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    width: 100%;  
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+  } 
+
+.button {
+   padding: 0.6em 1em;
+   border: 2px solid #01312D;
+   transition: ease-in-out 0.3s;
+   background-color: transparent;
+   color: #01312D;
+   font-weight: bolder;
+   font-size: 16px;
+   cursor: pointer;
+   text-align: center;
+  }
+
+.button:hover {
+  
+   background-color: #01312D;
+   color: white;
+  }
+
+input{
+    border: 1px solid rgb(142, 142, 142);
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+select {
+  font-size: 20px;
+  border-radius: 4px;
+  color: grey;
+  cursor: pointer;
+}
+
+.item{
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.check{
+  border-radius: 5px;
+  cursor: pointer;
+}
+.verde{
+  color: green;
+}
+.rojo{
+  color: red;
+}

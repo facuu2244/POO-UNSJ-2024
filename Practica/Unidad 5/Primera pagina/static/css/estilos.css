@@ -1,0 +1,13 @@
+body{
+    margin: 0; padding: 0; font-family: Verdana, Geneva, Tahoma, sans-serif;color:chocolate;
+}
+header{background-color: black; height: 10%; width: 100%; margin-bottom: 3%;}
+
+h1{font-family: Verdana, Geneva, Tahoma, sans-serif; color: blueviolet; text-align: center;}
+
+.container{padding-top: 2%; width: 50%; margin: 0 auto; background-color: chocolate;}
+
+.container label{font-weight: bold; margin-bottom: 2em; margin-left: 2em; color: blueviolet;}
+.container input{margin-bottom: 1em; margin-left: 2em;}
+.container button{margin-bottom: 1em; margin-left: 2em;}
+.container textarea{min-height: 12em; resize: vertical;}

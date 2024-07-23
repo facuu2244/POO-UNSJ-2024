@@ -1,0 +1,29 @@
+{% extends 'base_template.html' %}
+{% block title %}Recepción de paquete{% endblock %}
+{% block logi %}<h1>Logi Pack</h1>{% endblock %}
+
+{% block content %}
+<div>
+    
+    <!-- si se agrego correctamente el paquete o hubo un error -->
+    {% if mensaje=="Correcto" %}
+        <h3 class="verde">Paquete registrado correctamente</h3> 
+    {% elif mensaje=="Error" %}
+        <h3 class="rojo">Se produjo un error</h3>
+    {% endif %}
+    <form action="http://127.0.0.1:5000/recepcion_paquete", method="POST", class="container">
+        <label for="peso">Peso del paquete en kg</label>
+        <input type="number" name="peso", required><br>
+
+        <label for="peso">Nombre del destinatario</label>
+        <input type="text" name="nomdestinatario", required><br>
+        
+        <label for="peso">Direccion del destinatario</label>
+        <input type="text" name="dirdestinatario", required><br>
+        
+        <button type="submit" class="button">Registrar Paquete</button><br>
+        <a href="{{url_for('index')}}" class="button">Volver</a>
+    </form>
+</div>
+    
+{% endblock %}

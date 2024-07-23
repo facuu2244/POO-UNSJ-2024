@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenida</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    {% if hora < 12 %}
+        <h1>Buenos días {{ datosUsuario.nombre }}</h1>
+    {% else %}
+        <h1>Buenas tardes {{datosUsuario.nombre}}</h1>
+    {%endif%}
+    <h2>Recibiras notificaciones al correo: {{datosUsuario.email}}</h2>
+</body>
+</html>

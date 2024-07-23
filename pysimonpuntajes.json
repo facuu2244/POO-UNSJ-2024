@@ -1,0 +1,26 @@
+[
+   {
+      "nombre": "Facu",
+      "puntos": 1,
+      "fecha": "2024-06-19",
+      "hora": "21:21"
+   },
+   {
+      "nombre": "Juan",
+      "puntos": 2,
+      "fecha": "2024-06-24",
+      "hora": "18:17"
+   },
+   {
+      "nombre": "Pedro",
+      "puntos": 2,
+      "fecha": "2024-06-24",
+      "hora": "18:40"
+   },
+   {
+      "nombre": "Pedro",
+      "puntos": 0,
+      "fecha": "2024-06-24",
+      "hora": "18:40"
+   }
+]

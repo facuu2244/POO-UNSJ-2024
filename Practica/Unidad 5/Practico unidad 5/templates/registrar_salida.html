@@ -1,0 +1,27 @@
+{% extends 'base_template.html' %}
+{% block title %}LogiPack{% endblock %}
+{% block logi %}<h1>Logi Pack</h1>{% endblock %}
+
+{% block content %}
+    <div>
+        {% if mensaje=="Correcto" %}
+            <h3 class="verde">Transporte registrado correctamente</h3> 
+        {% elif mensaje=="Error" %}
+            <h3 class="rojo">Se produjo un error al registrar el transporte</h3>
+        {% endif %}
+        <h3>Paquetes no entregados y sin repartidor asignado:</h3>
+        <form action="http://127.0.0.1:5000/registrar_salida", method="POST", class="container">
+            <h4>Numero de envío y Direccion del destinatario</h4>
+            <ul>
+                {% for paquete in paquetes %}
+                <li>
+                    <label for="item" class="paquete">{{paquete.numeroenvio}}  -  {{paquete.dirdestinatario}}</label>
+                    <input type="checkbox" id="item" name="item" value="{{paquete.numeroenvio}}" class="check">
+                </li>
+                {% endfor %}
+            </ul>
+            <button type="submit" class="button">Registrar transporte</button><br>
+            <a href="{{url_for('index')}}" class="button">Volver</a>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+CVU,Numero_Transacción,Importe,Tipo_Transacción
+ABC123,1,1000,D
+DEF456,2,500,C
+GHI789,3,2000,D
+ABC123,4,800,C
+DEF456,5,1200,D
+GHI789,6,1500,C
